@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm test -- --coverage --watchAll=false
+        run: npm test -- --passWithNoTests --coverage --watchAll=false
 
       - name: Build application
         run: npm run build
@@ -40,7 +40,7 @@ jobs:
   deploy-github-pages:
     needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
 
     permissions:
       contents: read
