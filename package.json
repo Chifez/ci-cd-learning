@@ -1,6 +1,7 @@
 {
   "name": "cicd-learning-project",
   "version": "1.0.0",
+  "homepage": "https://Chifez.github.io/ci-cd-learning",
   "description": "A simple React project for learning CI/CD with Docker",
   "main": "index.js",
   "scripts": {
